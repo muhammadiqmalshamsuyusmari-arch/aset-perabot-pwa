@@ -2,7 +2,7 @@
 
 ## Fail dalam ZIP
 - `index.html` — aplikasi inventori responsif, 42 kelas awal, carian/tapis, pengiraan automatik, tambah/edit/padam, susun semula dan eksport PDF A4 landskap.
-- `manifest.json` dan `service-worker.js` — konfigurasi PWA. Cache telah dinaik taraf kepada v3.
+- `manifest.json` dan `service-worker.js` — konfigurasi PWA. Cache telah dinaik taraf kepada v4. Butang simpan besar dipaparkan terus di bawah tajuk dan melekat di bahagian atas apabila skrin telefon ditatal.
 - `Code.gs` — backend Google Apps Script. Fail ini mesti dipasang dalam projek Apps Script dan **bukan** dimuat naik sebagai halaman GitHub.
 
 ## Pembetulan isu simpanan Google Sheets
@@ -35,7 +35,7 @@ Sepatutnya terpapar JSON dengan `"ok":true`. Jika keluar halaman kebenaran, rala
 3. Commit perubahan dan tunggu GitHub Pages selesai diterbitkan.
 4. Buka laman dengan HTTPS, kemudian tekan `Ctrl+F5` (Windows) untuk memaksa muat semula. Jika masih versi lama, tutup tab aplikasi atau kosongkan data/cache laman kerana PWA menyimpan fail lama.
 5. Tekan **Sambungan**, masukkan URL Web App `/exec`, dan tekan OK.
-6. Tekan **Muat Semula Google** untuk membaca data. Selepas mengubah inventori, tekan **Simpan ke Google Drive**. Tunggu mesej pengesahan berjaya.
+6. Tekan **Muat Semula Google** untuk membaca data. Selepas mengubah inventori, tekan butang hijau besar **SIMPAN KE GOOGLE DRIVE** di bawah tajuk (atau butang dalam bar alat). Tunggu mesej pengesahan berjaya.
 7. Semak helaian pertama (`gid=0`, sepadan dengan URL CSV yang diberikan) dalam spreadsheet. Kod menulis pada helaian pertama (`gid=0`) yang sepadan dengan URL CSV anda. Kandungan helaian pertama akan diganti dengan rekod inventori; helaian lain tidak disentuh. Pastikan helaian pertama memang dikhaskan untuk inventori sebelum menekan simpan.
 
 ## Penting
@@ -44,3 +44,9 @@ Sepatutnya terpapar JSON dengan `"ok":true`. Jika keluar halaman kebenaran, rala
 - URL CSV yang diterbitkan (`output=csv`) hanya untuk bacaan dan tidak boleh menyimpan perubahan.
 - Setiap simpanan menggantikan semua rekod pada helaian pertama (`gid=0`) dengan data yang sedang dipaparkan pada peranti. Jangan simpan data kosong jika mahu mengekalkan rekod sedia ada.
 - Masukkan data sebenar sebelum laporan rasmi dikeluarkan. Lencana header ialah grafik sementara; gantikan dengan logo rasmi sekolah.
+
+
+## Laporan PDF A4 landskap (dikemas kini)
+Butang **Muat Turun Laporan PDF** kini menjana PDF menggunakan jsPDF + AutoTable dalam format **A4 landscape**. Laporan memasukkan semua kelas tanpa mengira carian atau penapis yang sedang aktif, memaparkan jumlah keseluruhan, mengulang tajuk jadual pada setiap halaman, mengelakkan baris dipotong antara halaman, dan menambah nombor halaman. Pastikan sambungan internet tersedia supaya pustaka PDF dari CDN dapat dimuatkan.
+
+Untuk mengemas kini laman sedia ada, gantikan `index.html`, `service-worker.js` dan `manifest.json` dalam root repositori GitHub, kemudian tekan **Commit changes**. Muat semula laman menggunakan `Ctrl + F5`.

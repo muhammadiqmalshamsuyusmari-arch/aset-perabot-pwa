@@ -1,0 +1,12 @@
+{
+  "name": "Sistem Pengurusan Aset Perabot Kelas SK Sungai Tiram",
+  "short_name": "Inventori SKST",
+  "description": "Penyelarasan rekod dan imbangan kerusi meja murid SK Sungai Tiram.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "landscape-primary",
+  "background_color": "#f3f7f5",
+  "theme_color": "#123d32",
+  "icons": []
+}

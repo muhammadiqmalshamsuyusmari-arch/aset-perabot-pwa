@@ -26,3 +26,7 @@ Pakej mengembangkan lajur inventori dengan `lamp`, `lampBad`, `fan`, `fanBad`. S
 - `index.html` — aplikasi
 - `Code.gs` — backend Google Apps Script
 - `manifest.json`, `service-worker.js` — sokongan PWA
+
+
+### Kemas kini logo dan ringkasan lampu/kipas
+Versi ini menggunakan logo rasmi SK Sungai Tiram daripada fail `logo.png`. Ringkasan di bahagian atas mengira jumlah lampu dan kipas seluruh kelas secara automatik daripada data setiap kelas. Pastikan `logo.png` turut dimuat naik ke repositori GitHub Pages.
